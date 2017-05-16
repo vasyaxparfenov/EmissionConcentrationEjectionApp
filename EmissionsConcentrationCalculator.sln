@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmissionsConcentrationCalcu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmissionsConcentrationConsoleApp", "EmissionsConcentrationConsoleApp\EmissionsConcentrationConsoleApp.csproj", "{1FC74B3C-4419-4A77-A49E-B84B97762BD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmissionsConcentrationAppTests", "EmissionsConcentrationAppTests\EmissionsConcentrationAppTests.csproj", "{E46BA5F4-2C69-45D2-BAC0-33C379B21F36}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmissionsConcentrationAppTest", "EmissionsConcentrationAppTest\EmissionsConcentrationAppTest.csproj", "{97588744-5CB6-4FE2-A958-2FC3EED1274C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{1FC74B3C-4419-4A77-A49E-B84B97762BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FC74B3C-4419-4A77-A49E-B84B97762BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FC74B3C-4419-4A77-A49E-B84B97762BD6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E46BA5F4-2C69-45D2-BAC0-33C379B21F36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E46BA5F4-2C69-45D2-BAC0-33C379B21F36}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E46BA5F4-2C69-45D2-BAC0-33C379B21F36}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E46BA5F4-2C69-45D2-BAC0-33C379B21F36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97588744-5CB6-4FE2-A958-2FC3EED1274C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97588744-5CB6-4FE2-A958-2FC3EED1274C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97588744-5CB6-4FE2-A958-2FC3EED1274C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97588744-5CB6-4FE2-A958-2FC3EED1274C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

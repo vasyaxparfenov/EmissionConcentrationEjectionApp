@@ -2,18 +2,18 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("EmissionsConcentrationAppTests")]
+[assembly: AssemblyTitle("EmissionsConcentrationAppTest")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EmissionsConcentrationAppTests")]
+[assembly: AssemblyProduct("EmissionsConcentrationAppTest")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 [assembly: ComVisible(false)]
 
-[assembly: Guid("e46ba5f4-2c69-45d2-bac0-33c379b21f36")]
+[assembly: Guid("97588744-5cb6-4fe2-a958-2fc3eed1274c")]
 
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]

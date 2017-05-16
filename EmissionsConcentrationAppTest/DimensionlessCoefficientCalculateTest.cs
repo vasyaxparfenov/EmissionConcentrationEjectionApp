@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using EmissionsConcentrationCalculator.Calculators;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace EmissionsConcentrationAppTests
+namespace EmissionsConcentrationAppTest
 {
     [TestClass]
     public class DimensionlessCoefficientCalculatorTests
@@ -45,4 +45,5 @@ namespace EmissionsConcentrationAppTests
             Assert.IsTrue(Math.Abs(_dimensionlessCoefficientCalculator.CalculateN() - 1) < Double.Epsilon);
         }
     }
+
 }

@@ -2,9 +2,8 @@
 using EmissionsConcentrationCalculator.Calculators;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace EmissionsConcentrationAppTests
+namespace EmissionsConcentrationAppTest
 {
-
     [TestClass]
     public class ParametersCalculatorTests
     {
@@ -19,7 +18,7 @@ namespace EmissionsConcentrationAppTests
 
             }
         };
-        
+
         [TestMethod]
         public void CalculateFeTest()
         {
@@ -29,7 +28,7 @@ namespace EmissionsConcentrationAppTests
         [TestMethod]
         public void CalculateFTest()
         {
-            Assert.IsTrue(Math.Abs(Math.Round(_calculator.CalculateF(),2) - 1.04) < Double.Epsilon);
+            Assert.IsTrue(Math.Abs(Math.Round(_calculator.CalculateF(), 2) - 1.04) < Double.Epsilon);
         }
 
         [TestMethod]
@@ -45,4 +44,5 @@ namespace EmissionsConcentrationAppTests
         }
 
     }
+
 }
