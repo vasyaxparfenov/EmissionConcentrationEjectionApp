@@ -1,23 +1,21 @@
 ﻿using System;
-using EmissionsConcentrationCalculator.Calculators;
+using EmissionsCalculator.Calculators;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace EmissionsConcentrationAppTest
+namespace EmissionsCalculatorTests
 {
     [TestClass]
     public class ParametersCalculatorTests
     {
-        private readonly ParametersCalculator _calculator = new ParametersCalculator
+        private readonly ParametersCalculator _calculator = new ParametersCalculator(new TestCalculateOptions
         {
-            Options = new TestCalculateOptions
-            {
-                OutcomeSpeed = 25,
-                SourceHeight = 180,
-                SourceMouthDiameter = 7,
-                TemperatureDelta = 130
+            OutcomeSpeed = 25,
+            SourceHeight = 180,
+            SourceMouthDiameter = 7,
+            TemperatureDelta = 130
 
-            }
-        };
+        });
+
 
         [TestMethod]
         public void CalculateFeTest()

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmissionsConcentrationCalculator", "EmissionsConcentrationCalculator\EmissionsConcentrationCalculator.csproj", "{059BFAF8-D970-4F93-9BFE-696A8CC7EEF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmissionsCalculator", "EmissionsCalculator\EmissionsCalculator.csproj", "{059BFAF8-D970-4F93-9BFE-696A8CC7EEF8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmissionsConcentrationConsoleApp", "EmissionsConcentrationConsoleApp\EmissionsConcentrationConsoleApp.csproj", "{1FC74B3C-4419-4A77-A49E-B84B97762BD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmissionsConcentrationAppTest", "EmissionsConcentrationAppTest\EmissionsConcentrationAppTest.csproj", "{97588744-5CB6-4FE2-A958-2FC3EED1274C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmissionsCalculatorTests", "EmissionsCalculatorTests\EmissionsCalculatorTests.csproj", "{97588744-5CB6-4FE2-A958-2FC3EED1274C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

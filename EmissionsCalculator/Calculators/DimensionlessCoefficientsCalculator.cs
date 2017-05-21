@@ -1,12 +1,16 @@
 ﻿using System;
-using EmissionsConcentrationCalculator.Interfaces;
-using static System.Double;
+using EmissionsCalculator.Interfaces;
 
-namespace EmissionsConcentrationCalculator.Calculators
+namespace EmissionsCalculator.Calculators
 {
-    public class DimensionlessCoefficientCalculator : IDimensionlessCoefficientCalculator
+    public class DimensionlessCoefficientsCalculator : IDimensionlessCoefficientsCalculator
     {
         public IParametersCalculator Parameters { get; set; }
+
+        public DimensionlessCoefficientsCalculator(IParametersCalculator parameters)
+        {
+            Parameters = parameters;
+        }
         public double CalculateM()
         {
             var f = Parameters.CalculateF();
@@ -22,7 +26,7 @@ namespace EmissionsConcentrationCalculator.Calculators
             var f = Parameters.CalculateF();
             var vm = Parameters.CalculateVm();
 
-            if (f > 100 || Parameters.Options.TemperatureDelta < Epsilon) // second condition ΔT ≈ 0
+            if (f > 100 || Parameters.Options.TemperatureDelta < Double.Epsilon) // second condition ΔT ≈ 0
             {
                 var vmhatch = Parameters.CalculateVmHatch();
                 if (vmhatch <= 0.5)
@@ -67,6 +71,19 @@ namespace EmissionsConcentrationCalculator.Calculators
 
             return 1;
 
+        }
+
+        public double CalculateF()
+        {
+            if (Parameters.Options.FilterCoefficient >= 90)
+            {
+                return 2;
+            }
+            if (Parameters.Options.FilterCoefficient >= 75 && Parameters.Options.FilterCoefficient < 90)
+            {
+                return 2.5;
+            }
+            return 3;
         }
     }
 }

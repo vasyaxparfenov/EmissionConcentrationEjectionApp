@@ -7,8 +7,8 @@
     <ProjectGuid>{97588744-5CB6-4FE2-A958-2FC3EED1274C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EmissionsConcentrationAppTest</RootNamespace>
-    <AssemblyName>EmissionsConcentrationAppTest</AssemblyName>
+    <RootNamespace>EmissionsCalculatorTests</RootNamespace>
+    <AssemblyName>EmissionsCalculatorTests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -57,9 +57,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EmissionsConcentrationCalculator\EmissionsConcentrationCalculator.csproj">
+    <ProjectReference Include="..\EmissionsCalculator\EmissionsCalculator.csproj">
       <Project>{059bfaf8-d970-4f93-9bfe-696a8cc7eef8}</Project>
-      <Name>EmissionsConcentrationCalculator</Name>
+      <Name>EmissionsCalculator</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
