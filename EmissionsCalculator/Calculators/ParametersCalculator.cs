@@ -1,5 +1,5 @@
 ﻿using System;
-using EmissionsCalculator.Interfaces;
+using EmissionsCalculator.CalculatorTypes;
 
 namespace EmissionsCalculator.Calculators
 {

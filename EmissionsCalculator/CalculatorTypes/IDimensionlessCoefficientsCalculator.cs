@@ -1,4 +1,4 @@
-﻿namespace EmissionsCalculator.Interfaces
+﻿namespace EmissionsCalculator.CalculatorTypes
 {
     public interface IDimensionlessCoefficientsCalculator
     {

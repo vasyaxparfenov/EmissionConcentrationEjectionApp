@@ -1,4 +1,4 @@
-﻿using EmissionsCalculator.Interfaces;
+﻿using EmissionsCalculator.CalculatorTypes;
 
 namespace EmissionsCalculatorTests
 {

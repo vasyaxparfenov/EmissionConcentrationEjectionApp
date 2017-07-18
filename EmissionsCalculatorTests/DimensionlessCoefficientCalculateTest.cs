@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography.X509Certificates;
 using EmissionsCalculator.Calculators;
-using EmissionsCalculator.Interfaces;
+using EmissionsCalculator.CalculatorTypes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace EmissionsCalculatorTests
@@ -32,7 +32,7 @@ namespace EmissionsCalculatorTests
 
         public void ConfigureCalculatorFor_F_Greater_Than_100() //Consider a case when VmHatch > 2
         {
-
+            _dimensionlessCoefficientsCalculator.Parameters.Options.SourceHeight = 10;
         }
 
         public void ConfigureCalculatorFor_VmHatch_Greater_Than_Half_And_Less_Than_Or_Same_With_2_Case_Test()
