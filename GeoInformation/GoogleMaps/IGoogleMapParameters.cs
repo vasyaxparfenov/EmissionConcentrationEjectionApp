@@ -7,10 +7,6 @@
         /// </summary>
         string Center { get; set; }
         /// <summary>
-        /// Parameter is for a scale determination
-        /// </summary>
-        string Zoom { get; set; }
-        /// <summary>
         /// Parameter is for an image format
         /// </summary>
         MapFormat Format { get; set; }

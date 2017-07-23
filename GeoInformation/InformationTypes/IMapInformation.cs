@@ -6,5 +6,7 @@ namespace GeoInformation.InformationTypes
     public interface IMapInformation
     {
         Task<Stream> GetStaticMapImage();
+
+        void SetZoomFromDistance(double distance);
     }
 }

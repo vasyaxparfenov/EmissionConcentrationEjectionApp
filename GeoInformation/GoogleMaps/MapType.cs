@@ -3,7 +3,7 @@
     public enum MapType
     {
         Roadmap,
-        Satelite,
+        Satellite,
         Hybrid,
         Terrain
     }
