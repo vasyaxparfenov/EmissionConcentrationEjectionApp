@@ -3,10 +3,32 @@ using EmissionsCalculator.CalculatorTypes;
 
 namespace EmissionsCalculator.Calculators
 {
-    public class DimensionlessCoefficientsCalculator : IDimensionlessCoefficientsCalculator
+    public class DimensionlessCoefficientsCalculator : IDimensionlessCoefficientsCalculator, IParameterised
     {
+        private IParametersOptions _options;
+
+        public IParametersOptions Options
+        {
+            get => Parameters?.Options ?? _options;
+            set
+            {
+                if (Parameters?.Options != null)
+                {
+                    Parameters.Options = value;
+                }
+                else
+                {
+                    _options = value;
+                }
+            }
+        }
+
         public IParametersCalculator Parameters { get; set; }
 
+        public DimensionlessCoefficientsCalculator()
+        {
+            
+        }
         public DimensionlessCoefficientsCalculator(IParametersCalculator parameters)
         {
             Parameters = parameters;
@@ -26,7 +48,7 @@ namespace EmissionsCalculator.Calculators
             var f = Parameters.CalculateF();
             var vm = Parameters.CalculateVm();
 
-            if (f > 100 || Parameters.Options.TemperatureDelta < Double.Epsilon) // second condition ΔT ≈ 0
+            if (f > 100 || Options.TemperatureDelta < Double.Epsilon) // second condition ΔT ≈ 0
             {
                 var vmhatch = Parameters.CalculateVmHatch();
                 if (vmhatch <= 0.5)
@@ -75,15 +97,16 @@ namespace EmissionsCalculator.Calculators
 
         public double CalculateF()
         {
-            if (Parameters.Options.FilterCoefficient >= 90)
+            if (Options.FilterCoefficient >= 90)
             {
                 return 2;
             }
-            if (Parameters.Options.FilterCoefficient >= 75 && Parameters.Options.FilterCoefficient < 90)
+            if (Options.FilterCoefficient >= 75 && Options.FilterCoefficient < 90)
             {
                 return 2.5;
             }
             return 3;
         }
+
     }
 }

@@ -63,5 +63,6 @@ namespace EmissionsCalculator.Calculators
         {
             return WindSpeed / CalculateUm();
         }
+
     }
 }

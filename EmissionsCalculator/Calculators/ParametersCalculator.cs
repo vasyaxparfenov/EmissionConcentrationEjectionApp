@@ -6,7 +6,7 @@ namespace EmissionsCalculator.Calculators
     public class ParametersCalculator : IParametersCalculator
     {
         public IParametersOptions Options { get; set; }
-
+        
         public ParametersCalculator(IParametersOptions options)
         {
             Options = options;

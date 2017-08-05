@@ -1,21 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.14
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmissionsCalculator", "EmissionsCalculator\EmissionsCalculator.csproj", "{059BFAF8-D970-4F93-9BFE-696A8CC7EEF8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmissionsConcentrationConsoleApp", "EmissionsConcentrationConsoleApp\EmissionsConcentrationConsoleApp.csproj", "{1FC74B3C-4419-4A77-A49E-B84B97762BD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmissionsCalculatorTests", "EmissionsCalculatorTests\EmissionsCalculatorTests.csproj", "{97588744-5CB6-4FE2-A958-2FC3EED1274C}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoInformation", "GeoInformation\GeoInformation.csproj", "{578E948A-AC4A-429B-944C-0843B75D880C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoInformationTests", "GeoInformationTests\GeoInformationTests.csproj", "{76676235-FECA-41C3-9FE0-B09B1B3D41E5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapImageProcessing", "MapImageProcessing\MapImageProcessing.csproj", "{12E6B17E-B5EA-4DC3-8E38-D1E247002275}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetFrameworkConsoleTest", "NetFrameworkConsoleTest\NetFrameworkConsoleTest.csproj", "{73336363-970E-4AFC-9B45-BBF52111CA3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{5466FC54-0637-4092-AFBD-BB5E112F2EC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,18 +29,10 @@ Global
 		{1FC74B3C-4419-4A77-A49E-B84B97762BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FC74B3C-4419-4A77-A49E-B84B97762BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FC74B3C-4419-4A77-A49E-B84B97762BD6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{97588744-5CB6-4FE2-A958-2FC3EED1274C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{97588744-5CB6-4FE2-A958-2FC3EED1274C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{97588744-5CB6-4FE2-A958-2FC3EED1274C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{97588744-5CB6-4FE2-A958-2FC3EED1274C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{578E948A-AC4A-429B-944C-0843B75D880C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{578E948A-AC4A-429B-944C-0843B75D880C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{578E948A-AC4A-429B-944C-0843B75D880C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{578E948A-AC4A-429B-944C-0843B75D880C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{76676235-FECA-41C3-9FE0-B09B1B3D41E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{76676235-FECA-41C3-9FE0-B09B1B3D41E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{76676235-FECA-41C3-9FE0-B09B1B3D41E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{76676235-FECA-41C3-9FE0-B09B1B3D41E5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{12E6B17E-B5EA-4DC3-8E38-D1E247002275}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{12E6B17E-B5EA-4DC3-8E38-D1E247002275}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12E6B17E-B5EA-4DC3-8E38-D1E247002275}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +41,10 @@ Global
 		{73336363-970E-4AFC-9B45-BBF52111CA3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73336363-970E-4AFC-9B45-BBF52111CA3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73336363-970E-4AFC-9B45-BBF52111CA3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5466FC54-0637-4092-AFBD-BB5E112F2EC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5466FC54-0637-4092-AFBD-BB5E112F2EC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5466FC54-0637-4092-AFBD-BB5E112F2EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5466FC54-0637-4092-AFBD-BB5E112F2EC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
