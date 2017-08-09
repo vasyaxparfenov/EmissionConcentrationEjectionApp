@@ -14,14 +14,11 @@ namespace EmissionsCalculator.Calculators
                 {
                     DistanceCoefficients.DimensionlessCoefficients.Parameters.Options = value;
                 }
-                else
-                {
-                    _options = value;
-                }
+                _options = value;
             }
         }
 
-        public IDistanceCoefficientsCalculator DistanceCoefficients { get; set; }
+        public IDistanceCoefficientsCalculator DistanceCoefficients { get; }
 
         public DistanceCalculator(IDistanceCoefficientsCalculator distnaceCoefficients)
         {

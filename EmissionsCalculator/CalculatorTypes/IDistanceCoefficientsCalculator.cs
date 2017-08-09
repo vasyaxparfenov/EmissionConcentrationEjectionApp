@@ -9,7 +9,7 @@
         /// <summary>
         /// Calculator needed for calculating needed dimensionless coefficients
         /// </summary>
-        IDimensionlessCoefficientsCalculator DimensionlessCoefficients { get; set; }
+        IDimensionlessCoefficientsCalculator DimensionlessCoefficients { get; }
         /// <summary>
         /// Calculates dangerous wind speed
         /// </summary>

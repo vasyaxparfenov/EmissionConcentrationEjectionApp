@@ -16,19 +16,13 @@ namespace EmissionsCalculator.Calculators
                 {
                     Parameters.Options = value;
                 }
-                else
-                {
-                    _options = value;
-                }
+                _options = value;
             }
         }
 
-        public IParametersCalculator Parameters { get; set; }
+        public IParametersCalculator Parameters { get;}
 
-        public DimensionlessCoefficientsCalculator()
-        {
-            
-        }
+
         public DimensionlessCoefficientsCalculator(IParametersCalculator parameters)
         {
             Parameters = parameters;

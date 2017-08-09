@@ -5,7 +5,7 @@
         /// <summary>
         /// Calculator responsible for calculating needed parameters
         /// </summary>
-        IParametersCalculator Parameters { get; set; }
+        IParametersCalculator Parameters { get;}
         /// <summary>
         /// Calculates M coefficient based on parameters
         /// </summary>

@@ -5,7 +5,7 @@
         /// <summary>
         /// Calculator needed for calculating coefficients for distance calculations
         /// </summary>
-        IDistanceCoefficientsCalculator DistanceCoefficients { get; set; }
+        IDistanceCoefficientsCalculator DistanceCoefficients { get; }
         /// <summary>
         /// Calculates distance of max outcome for gas-likes substances
         /// </summary>

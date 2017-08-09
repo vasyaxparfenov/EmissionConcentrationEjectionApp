@@ -6,7 +6,7 @@ namespace EmissionsCalculator.Calculators
     public class DistanceCoefficientsCalculator : IDistanceCoefficientsCalculator
     {
         public double WindSpeed { get; set; }
-        public IDimensionlessCoefficientsCalculator DimensionlessCoefficients { get; set; }
+        public IDimensionlessCoefficientsCalculator DimensionlessCoefficients { get;}
 
         public DistanceCoefficientsCalculator(IDimensionlessCoefficientsCalculator dimensionlessCoefficients )
         {
