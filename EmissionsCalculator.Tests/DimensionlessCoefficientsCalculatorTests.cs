@@ -30,24 +30,90 @@ namespace EmissionsCalculator.Tests
             ParametersCalculatorMock = null;
         }
 
-        [TestCase()]
-        public void CalculateMTest_FLesserThan100_ReturnsResultEqualToExpectedOne(double expectedResult, double f)
+        public void ConfigureParametersCalculator(double f, double vm = 0, double vmHatch = 0)
         {
-            if(f >= 100) { throw new ArgumentException("F should be lesser than 100");}
             ParametersCalculatorMock.Setup(p => p.CalculateF()).Returns(f);
-            var result = DimensionlessCoefficientsCalculator.CalculateM();
-            GeneralAssert(expectedResult, result, 2);
-        }
-        [TestCase()]
-        public void CalculateMTest_FGreaterThan100_ReturnsResultEqualToExpectedOne(double expectedResult, double f)
-        {
-            if(f < 100) { throw new ArgumentException("F should be greater than 100"); }
-            ParametersCalculatorMock.Setup(p => p.CalculateF()).Returns(f);
-            var result = DimensionlessCoefficientsCalculator.CalculateM();
-            GeneralAssert(expectedResult, result, 2);
+            ParametersCalculatorMock.Setup(p => p.CalculateVm()).Returns(vm);
+            ParametersCalculatorMock.Setup(p => p.CalculateVmHatch()).Returns(vmHatch);
         }
 
+        [Test]
+        public void CalculateMTest_Calculating_IParameteresCalculatorCalculateFIsCalled()
+        {
+            DimensionlessCoefficientsCalculator.CalculateM();
+            ParametersCalculatorMock.Verify(p => p.CalculateF());
+        }
 
+        [TestCase()]
+        public void CalculateMTest_Calculating_ReturnsResultEqualToExpectedOne(double expectedResult, double f, int round)
+        {
 
+            ConfigureParametersCalculator(f);
+            var result = DimensionlessCoefficientsCalculator.CalculateM();
+            GeneralAssert(expectedResult, result, round);
+        }
+        
+        [Test]
+        public void CalculateDTest__Calculating_IParametersCalculatorCalculateFIsCalled()
+        {
+            DimensionlessCoefficientsCalculator.CalculateD();
+            ParametersCalculatorMock.Verify(p => p.CalculateF());
+        }
+
+        [Test]
+        public void CalculateDTest__Calculating_IParametersCalculatorCalculateVmIsCalled()
+        {
+            DimensionlessCoefficientsCalculator.CalculateD();
+            ParametersCalculatorMock.Verify(p => p.CalculateVm());
+        }
+
+        [Test]
+        public void CalculateDTest_FGreaterThan100_IParametersCalculatorCalculateVmHatchIsCalled()
+        {
+            ConfigureParametersCalculator(101);
+            DimensionlessCoefficientsCalculator.CalculateD();
+            ParametersCalculatorMock.Verify(p => p.CalculateVm());
+        }
+
+        [TestCase()]
+        public void CalculateDTest_Calculating_ReturnsResultEqualToExpectedOne(double expectedResult, double f, double vm, double vmHatch, int round)
+        {
+            ConfigureParametersCalculator(f, vm, vmHatch);
+            var result = DimensionlessCoefficientsCalculator.CalculateD();
+            GeneralAssert(expectedResult, result, round);
+        }
+        
+        [Test]
+        public void CalculateNTest_Calculating_IParametersCalculatorCalculateVmIsCalled()
+        {
+            DimensionlessCoefficientsCalculator.CalculateN();
+            ParametersCalculatorMock.Verify(p => p.CalculateVm());
+        }
+
+        [TestCase()]
+        public void CalculateNTest_Calculating_ReturnsResultEqualToExpectedOne(double expectedResult, double vm, int round)
+        {
+            ConfigureParametersCalculator(0, vm);
+            var result = DimensionlessCoefficientsCalculator.CalculateN();
+            GeneralAssert(expectedResult, result, round);
+        }
+
+        [Test]
+        public void CalculateFTest_FilterCoefficientsGreaterThanOrEqual90_Returns2()
+        {
+            ParametersOptionsStub.SetupProperty(o => o.FilterCoefficient, 90);
+            var result = DimensionlessCoefficientsCalculator.CalculateF();
+            GeneralAssert(2, result, 0);
+        }
+
+        [Test]
+        public void CalculateFTest_FilterCoefficientsLesserThan90AndGreaterThanOrEqual75_Returns2andHalf()
+        {
+            ParametersOptionsStub.SetupProperty(o => o.FilterCoefficient, 75);
+            var result = DimensionlessCoefficientsCalculator.CalculateF();
+            GeneralAssert(2.5, result, 1);
+        }
+
+       
     }
 }

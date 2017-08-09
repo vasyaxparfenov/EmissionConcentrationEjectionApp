@@ -29,7 +29,7 @@ namespace EmissionsCalculator.Tests
         }
         
         [TestCase(1615.16, 25, 180, 7, 130)]
-        public void CalculateFeTest_TakesArguments_ReturnsResultEqualToExpectedOne(double expectedResult, double outcomeSpeed, double sourceHeight, double sourceMouthHeight,
+        public void CalculateFeTest_Calculating_ReturnsResultEqualToExpectedOne(double expectedResult, double outcomeSpeed, double sourceHeight, double sourceMouthHeight,
             double temperatureDelta)
         {
             ConfigureMockParametersOptions(outcomeSpeed, sourceHeight, sourceMouthHeight, temperatureDelta);
@@ -38,7 +38,7 @@ namespace EmissionsCalculator.Tests
         }
 
         [TestCase(1.04, 25, 180, 7, 130)]
-        public void CalculateFTest_TakesArguments_ReturnsResultEqualToExpectedOne(double expectedResult, double outcomeSpeed,
+        public void CalculateFTest_Calculating_ReturnsResultEqualToExpectedOne(double expectedResult, double outcomeSpeed,
             double sourceHeight, double sourceMouthHeight,
             double temperatureDelta)
         {
@@ -48,7 +48,7 @@ namespace EmissionsCalculator.Tests
         }
 
         [TestCase(5.76, 25, 180, 7, 130)]
-        public void CalculateVmTest_TakesArguments_ReturnsResultEqualToExpectedOne(double expectedResult, double outcomeSpeed,
+        public void CalculateVmTest_Calculating_ReturnsResultEqualToExpectedOne(double expectedResult, double outcomeSpeed,
             double sourceHeight, double sourceMouthHeight,
             double temperatureDelta)
         {
@@ -58,7 +58,7 @@ namespace EmissionsCalculator.Tests
         }
 
         [TestCase(1.26, 25, 180, 7, 130)]
-        public void CalculateVmHatchTest_TakesArguments_ReturnsResultEqualToExpectedOne(double expectedResult, double outcomeSpeed,
+        public void CalculateVmHatchTest_Calculating_ReturnsResultEqualToExpectedOne(double expectedResult, double outcomeSpeed,
             double sourceHeight, double sourceMouthHeight,
             double temperatureDelta)
         {

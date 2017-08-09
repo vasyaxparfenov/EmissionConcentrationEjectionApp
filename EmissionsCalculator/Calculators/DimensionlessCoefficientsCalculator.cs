@@ -42,7 +42,7 @@ namespace EmissionsCalculator.Calculators
             var f = Parameters.CalculateF();
             var vm = Parameters.CalculateVm();
 
-            if (f > 100 || Options.TemperatureDelta < Double.Epsilon) // second condition ΔT ≈ 0
+            if (f > 100) // second condition ΔT ≈ 0
             {
                 var vmhatch = Parameters.CalculateVmHatch();
                 if (vmhatch <= 0.5)
